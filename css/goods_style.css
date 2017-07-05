@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+*{margin:0px;padding:0px;}
+
+.margin{width:1263px; margin:0 auto;}
+body{background-color:#f6f3f3;}
+header{width:100%;background:#f9f9f9;}
+header .header1{width:100%; height:30px; background:#333;}
+header .header1 .header-nav1 ul{float:left; }
+header .header1 .header-nav1 ul li{float:left;}
+header .header1 .header-nav1 ul li a{display:block;font:12px/10px "";padding-left:10px;padding-right:10px;border-right:1px solid #ccc;margin-top:10px;color:#ccc;}
+header .header1 .header-nav1 ul li a:hover{color:#fff;}
+header .header1 .header-nav1 ul li:first-child a{padding-left:30px;}
+header .header1 .header-nav1 ul li:last-child a{border-right:none;}
+header .header1 .header-user1{float:right; width:570px;}
+header .header1 .header-user1 .user-out1{float:left;width:226px;}
+header .header1 .header-user1 .user-out1 span{display:block;float:left;font:12px/30px "";color:#ccc;}
+header .header1 .header-user1 .user-out1 ul li{float:left;font:12px/30px "";color:#ccc;padding-left:14px;}
+header .header1 .header-user1 .user-out1 ul li a{color:#ccc; border-right:1px solid #ccc;padding-right:14px;}
+header .header1 .header-user1 .user-out1 ul li a:hover{color:#fff;}
+header .header1 .header-nav1 ul li:last-child a{border-right:none;}
+header .header1 .header-user1 .user-center1{float:left;width:67px;}
+header .header1 .header-user1 .user-center1 a{display:block;font:12px/30px "";overflow:hidden;text-align:center;color:#ccc;}
+header .header1 .header-user1 .user-center1 span{display:block;float:left;overflow:hidden;text-align:center;color:#ccc;}
+header .header1 .header-user1 .user-center1 ul{float:left;overflow:hidden;height:0px;color:#ccc;}
+header .header1 .header-user1 .user-center1 ul li{overflow:hidden;}
+header .header1 .header-user1 .msg-box1{float:left;width:117px;background:#f7b200;}
+header .header1 .header-user1 .msg-box1 a{float:left;width:117px;font:12px/30px "";text-align:center;color:#fff;}
+header .header1 .header-user1 .car1{ display:block; float:left;width:110px;font:12px/30px "";text-align:center;color:#fff;background:#513767;}
+
+header .daohang{width:100%;height:98px; float: left;background:#fff;}
+header .daohang .daohangleft{width:231px;height:98px; float:left; background:url(../images/logo.png) no-repeat center;padding-left:50px; }
+header .daohang .daohangright{position:relative;}
+header .daohang .daohangright #sousuo{width:312px;height:32px;position:absolute;left:400px;top:30px;}
+header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(../images/sosuuo.png) no-repeat center;z-index:5;position:absolute;left:714px;top:29.8px;border:1px solid #bcbcbc;}
+
+
+#BlandNav{width:100%;height:52px; float:left;}
+#BlandNav span{display:block; font:12px/52px ""; color:#666;padding-left:90px;}
+
+#BlandMan{width: 1078px;height:136px;float:left; background:#fff;margin-left: 92px;position:relative;}
+#BlandMan .BlandLogo{width:250px;height:136px;position:absolute;}
+#BlandMan .BlandLogo img{padding:12px 0 0 20px;}
+#BlandMan .BlandLogo span{font:22px/22px "微软雅黑";padding-left:14px;}
+#BlandMan .BlandLogo a{position:absolute;left:170px; top:76px;font-size:14px; color:#503767;}
+#BlandMan .BlandNum{width:232px;height:44px;float:right;padding-top:50px;}
+#BlandMan .BlandNum .p1{width:54px; height:12px;}
+#BlandMan .BlandNum .p2{width:54px; height:12px;}
+
+
+#BlandUp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:40px; }
+
+#BlandUpZ {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
+.Blz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
+#BlandUpZ .Blz p{color:#ff0000;margin-top:10px;}
+
+#BlandUpp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
+
+#BlandUpZz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
+.Blzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
+#BlandUpZz .Blzz p{color:#ff0000;margin-top:10px;}
+
+#BlandUppp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
+
+#BlandUpZzz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
+.Blzzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
+#BlandUpZzz .Blzzz p{color:#ff0000;margin-top:10px;}
+
+#BlandUpppp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
+
+#BlandUpZzzz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
+.Blzzzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
+#BlandUpZzzz .Blzzzz p{color:#ff0000;margin-top:10px;}
+
+
+#footer{width:100%;height:160px;background:#fff;margin-top:70px;}
+#footer .footerright{width:336px;height:154px;float:left;padding-left:176px; }
+#footer .footerright ul{float:left;padding-top:40px; }
+#footer .footerright ul li{float:left;border-right:1px solid #333;padding:0 16px 0 16px;}
+#footer .footerright ul li:last-child{border-right:none;}
+#footer .footerright ul li a{text-align:center;}
+#footer .footerright p{float:left;padding:10px 0 0 16px;width:332px;height:12px;}
+#footer .footerright img{float:left;padding-top:12px; padding-right:2px;}
+#footer .footerright .zei{display:block;float:left;padding-top:14px;}
+#footer .footerright span{display:block;padding-top:8px; width:360px;height:12px; float:left;padding-left:20px; }
+#footer .footercenter{width:220px;height:154px;float:left;padding-left: 80px;}
+#footer .footercenter img{float:left;padding-top: 48px;}
+#footer .footercenter p{float:left;width:98px;height:12px;padding-top: 66px;padding-left:16px; }
+#footer .footercenter a{display:block;float:left;padding-top:10px;padding-left:16px; }
+#footer .footerleft{width:220px;height:154px;float:left;padding-left:16px;}
+#footer .footerleft img{float:left;padding-top: 48px;}
+#footer .footerleft p{float:left;width:98px;height:12px;padding-top: 66px;padding-left:16px; }
+#footer .footerleft a{display:block;float:left;padding-top:10px;padding-left:16px; }

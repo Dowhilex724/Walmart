@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>沃玛 - 全球经典首选电子商务平台</title>
+	<link href="css/public.css" rel="stylesheet" type="text/css">
+	<link href="css/shoppingcar.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/mytools.js"></script>
+</head>
+<body>
+<div class="header1">
+		<div class="header-nav1">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">商家入驻</a></li>
+				<li><a href="#">平台政策</a><b></b></li>
+				<li id="hua"><a href="#">必要手机版</a></li>
+			</ul>
+			
+		</div>
+
+		<div class="header-user1">
+			<div class="user-out1">
+				<span></span>
+				<ul>
+					<li><a href="javascript:void(0)" id="loginBtn">用户4396</a><b></b></li>
+					<li><a href="javascript:void(0)" id="registBtn">ⅴ</a><b></b></li>
+				</ul>
+			</div>
+			<div class="user-center1">
+				<a href="javascript:void(0)">个人中心<b></b></a><i></i>
+				<ul>
+					<li><a href="http://www.biyao.com/MyCenters/MyOrder.html" target="_blank">我的订单</a></li>
+					<li><a href="http://www.biyao.com/MyCenter/Profile.html" target="_blank">个人设置</a></li>
+				</ul>
+			</div>
+			<div class="msg-box1">
+				<a href="javascript:void(0);" class="msg-center">
+				<i id="hasMsg"></i>
+				<span class="msg-title">消息中心</span>
+				<i id="unread">0</i></a>
+				<div class='msg-center-box'>
+					<i class="msg-center-i" style="left:-180px"></i>
+					<div id="msg-ul" style="left: -180px;">
+						<div id="msg-scroll">
+							
+						</div>
+						<div id="scrollOut" class="scrollOut off none">
+							<span id='scrollIn' class="scrollIn inline"></span>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			<a class="car1" href="http://buy.biyao.com/shopcars/index.html"  target="_blank">购物车<i id="shopCar">0</i></a>
+		</div>
+</div>	
+
+<div id="user-out">
+		<img src="images/logo.png" />
+		<div class="boxright">
+			<div class="boximg">
+			</div>
+			<ul>
+				<li>查看购物车</li>
+				<li>确定订单信息</li>
+				<li>在线付款</li>
+				<li>收货及评价</li>
+			</ul>
+		</div>
+</div>
+<div id="tiao">
+</div>
+<div id="Carnav" class="margin">
+	<span>购物车</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="xuanxiang">
+	<ul>
+		<li class="x1"><input id="Checkbox1" type="checkbox"  class="allselect"/></li>
+		<li class="x2">全选</li>
+		<li class="x3">商品信息</li>
+		<li class="x4">单价</li>
+		<li class="x5">数量</li>
+		<li class="x6">包装</li>
+		<li class="x7">小计</li>
+		<li class="x8">操作</li>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+<div id="shangpinbox">
+	<div class="Sp1">
+		<span class="sp2"><input id="Checkbox0" type="checkbox"  class="allselect"/>商家:</span>
+		<span class="sp3">mutudu皮具</span>
+	</div>
+	<div class="Sp2">
+		<div class="c1"><input id="Checkbox2" type="checkbox"  class="allselect" name="newslist" /></div>
+		<a href="#"><div class="c2"></div></a>
+		<div class="c3">
+			<a href="#"><span>头层牛皮耐摔硅胶软壳轻薄男女款</span></a> <br/>
+			<div class="c33">
+			颜色:黑色(蛇纹款)
+			<br/>
+			尺寸:iphone7
+			</div>
+		</div>
+		<div class="c4 ">￥129</div>
+		<div class="c5">
+		<i class="c55"></i>
+		<input id="wzz" name ="quantity" type="text" maxlength="3" name="input_11699136"
+							value="1" shopcarid="11699136"
+							discount="0.0" price="129.0"
+							num="1" packageprice="0.0"
+							modelid="0" supplierid="130119"
+							designid="1301195169060100001" sizename="颜色:黑色（蛇纹款）|尺寸:iPhone7"
+							class="jkl">
+		<i class="c56"></i>
+		</div>
+		<div class="c6"></div>
+		<div class="c7" id="c7">￥129</div>
+		<div class="c8">
+			<div id="c88"></div>
+		</div>
+	</div>
+	<div class="Sp3">
+		<div class="p1">
+			<div class="pp1">
+				<i><input id="Checkbox3" type="checkbox"  class="allselect"/></i>
+				<span>全选</span>
+				<a href="#">删除</a>
+			</div>
+			<div class="pp2">
+				商品总价：<span class="zongjia" id="totalPrice">¥129</span>
+			</div>
+			<span class="zongshu">商品总数<em class="jianshu" id="totalNum">1</em> 件</span>
+		</div>
+		
+
+		<div class="p2">
+			<div class="baozhuang">
+				包装费：<span class="Bmoney" id="packagePrice">￥0</span>
+			</div>
+		</div>
+	</div>
+	<div class="tallyBox">
+			<a href="http://www.biyao.com/home/index.html"
+			class="inline">继续购物</a>
+			<span id="jz1" style="display:none;">结算</span>
+			 <a href="javascript:;"
+			class="tallyBTnPos" id="jz2">结算</a>
+		<p class="t_r" id="zong1">
+			合计（不含运费）：<span class="f20" id="zong1">
+				￥129</span><span class="f14"></span>
+		</p>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="liucheng">
+	<img src="images/dibu.png"/>
+</div>
+<div id="footer">
+	<div class="footerright">
+		<ul>
+			<li><a href="#">关于沃玛</a></li>
+			<li><a href="#">加入沃玛</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">官方微博</a></li>
+		</ul>
+		<p>©BIYAO.COM 2017 版权所有</p>
+		<img src="images/biao1.png" />
+		<a class="zei" href="#">粤公网安备44049102496139号 粤ICP备13088531号</a>
+		<span>珠海必要科技有限公司 联系方式：010-85715676</span>
+	</div>
+	<div class="footercenter">
+		<img src="images/erweima.png" />
+		<p>扫描二维码下载</p>
+		<a href="#">沃玛手机客户端</a>
+	</div>
+	<div class="footerleft">
+		<img src="images/erweima.png" />
+		<p>扫描二维码下载</p>
+		<a href="#">沃玛手机客户端</a>
+	</div>
+</div>
+</body>
+</html>

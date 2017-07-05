@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>沃玛 - 全球经典首选电子商务平台</title>
+	<link href="css/public.css" rel="stylesheet" type="text/css">
+	<link href="css/style3.css" rel="stylesheet" type="text/css">
+	<script src="js/json2.js"></script>
+	<script src="js/mytools.js"></script>
+</head>
+<script>
+window.onload=function(){
+	document.getElementById("tijiao1").onclick=function(){
+		var uname=document.getElementById("zhanghao2").value;
+		var upws=document.getElementById("mima2").value;
+		var date=new Date();
+		date.setDate(date.getDate()+7);
+		document.cookie="unmae="+uname+"; expires="+date.toGMTString();
+		document.cookie="upws="+upws+"; expires="+date.toGMTString();			
+	};
+	var arr=document.cookie.split("; ");
+	var uname,upws;
+	for(var i in arr){//uname=zhang
+		var item=arr[i].split("=");
+		if(item[0]=="unmae"){
+			uname=item[1];
+		}
+		if(item[0]=="upws"){
+			upws=item[1];
+		}
+	}
+	if(uname && upws){
+		alert("欢迎您回来!");
+	}
+
+	$("tijiao1").onclick=function(){
+ 		if(($("mima2").value!="")&&($("zhanghao2").value!="")){
+ 				alert("登陆成功");
+ 			}else{
+ 				alert("请输入账号密码");
+ 		}
+ 	}
+};
+</script>
+<body>
+<div id="user-out">
+		<img src="images/logo.png" />
+		<div class="right1">
+			<span>欢迎来到必要，请</span>
+			<ul>
+				<li><a href="#">登录|</a></li>
+				<li><a href="#">注册</a></li>
+			</ul>
+		</div>
+		
+</div>
+<div id="tiao">
+</div>
+
+<div id="main">
+	<div id="neirong">
+		<div class="tou2">
+			<img src="images/ren1.png" />
+			<a href="#">用户登录</a>
+		</div>
+		<input type="text" name="zhanghao" id="zhanghao2" /><br/>
+		<input type="password" name="mima" id="mima2" /><br/>
+		<input type="checkbox" id="kuang1" />
+		<span class="zizi">下次自动登录</span>
+		<a class="xieyi1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp忘记密码？</a><br/>
+		<input type="submit" id="tijiao1" value="登录" />
+		<a class="sanfang">使用第三方账号登录：</a>
+		<input type="button" id="weixin" value="微信登录" />
+		<input type="button" id="qq" value="QQ登录" />
+	</div>
+</div>
+<script>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="footer">
+	<div class="footerright">
+		<ul>
+			<li><a href="#">关于沃玛</a></li>
+			<li><a href="#">加入沃玛</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">官方微博</a></li>
+		</ul>
+		<p>©BIYAO.COM 2017 版权所有</p>
+		<img src="images/biao1.png" />
+		<a class="zei" href="#">粤公网安备44049102496139号 粤ICP备13088531号</a>
+		<span>珠海必要科技有限公司 联系方式：010-85715676</span>
+	</div>
+	<div class="footercenter">
+		<img src="images/erweima.png" />
+		<p>扫描二维码下载</p>
+		<a href="#">沃玛手机客户端</a>
+	</div>
+	<div class="footerleft">
+		<img src="images/erweima.png" />
+		<p>扫描二维码下载</p>
+		<a href="#">沃玛手机客户端</a>
+	</div>
+</div>
+</body>
+</html>
