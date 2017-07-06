@@ -43,10 +43,10 @@ header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(..
 #nav2{width:1263px;height:500px;float:left;margin-left:32px; }
 #nav2 #nav2-left{width:562px;height:499px;float:left;}
 #nav2 #nav2-left img{float:left;}
-#nav2 #nav2-left #xt{width:82px;height:462px;float:left;}
-#nav2 #nav2-left #xt li{width:80px; height:80px;padding:0px 0 13px 18px;}
-#nav2 #nav2-left #xt li img{border:1px solid #ccc;}
-
+#nav2 #nav2-left #xt{width:82px;height:462px;float:left;padding-left:18px;}
+#nav2 #nav2-left #xt li{width:80px; height:80px;padding:0px 0 13px 0px;}
+#nav2 #nav2-left #xt>li>img{border:1px solid #ccc;width:80px; height:80px;}
+#nav2 #nav2-left .dt{width:462px;height:462px;}
 #nav2 #nav2-left #xz{width:562px;height:17px;float:left;padding-top:23px;}
 #nav2 #nav2-left #xz li{float:left;width:70px;height:17px;padding-left:20px;background:url(../images/duihao.png) no-repeat left 0px;}
 

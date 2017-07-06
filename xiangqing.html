@@ -7,7 +7,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/xqstyle.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/tools.js"></script>
+
 	
 </head>
 <body>
@@ -76,17 +76,20 @@
 		</div>
 		
 </header>
-<div id="nav1" class="margin">
+<div class="margin">
+<div id="nav1">
 	<a href="#">首页</a>
 	<span>> 松紧腰 竖条纹 时尚休闲裤</span>
 </div>
-
+</div>
+<div class="margin">
 <div id="nav2"class="margin">
 	<div id="nav2-left">
-		<img src="images/xqt1.png" />
 		
-		<ul id="xt">
-			<li><img src="images/xqt2.png" /></li>
+		<img class="dt" src="images/xqt1.png" />
+		
+		<ul id="xt" class="xt">
+			<li><img src="images/xqt1.png" /></li>
 			<li><img src="images/xqt2.png" /></li>
 			<li><img src="images/xqt3.png" /></li>
 			<li><img src="images/xqt4.png" /></li>
@@ -161,7 +164,8 @@
 		</div>
 	</div>
 </div>
-
+</div>
+<div class="margin">
 <div id="nav3" class="margin">
 	<div class="n3daohang">
 		<a href="#">
@@ -357,6 +361,7 @@
 		<div class="hide"></div>
 	</div>
 </div>
+</div>
 
 
 
@@ -367,8 +372,8 @@
 
 
 
-
-<div id="footer" class="margin">
+<div class="margin">
+<div id="footer">
 	<div class="footerright">
 		<ul>
 			<li><a href="#">关于沃玛</a></li>
@@ -392,11 +397,53 @@
 		<a href="#">沃玛手机客户端</a>
 	</div>
 </div>
-
+</div>
 </body>
 </html>
 
+	
 <script type="text/javascript">
+	$(document).ready(function(){
+	var $miaobian=$("#xt>li");
+	var $huantu=$('.dt');
+	var $miaobian1=$('.panel-specs>div');
+	$miaobian.click(function(){miaobian(this);});
+	$miaobian1.click(function(){miaobian1(this);});
+	function miaobian(thisMb){
+		for(var i=0; i<$miaobian.length; i++){
+			$miaobian[i].style.borderColor = '#dedede';
+		}
+		thisMb.style.borderColor = '#cd2426';
+
+		$huantu[0].src = thisMb.children[0].src;
+	}
+	function miaobian1(thisMb1){
+		for(var i=0; i<$miaobian1.length; i++){
+			$miaobian1[i].style.borderColor = '#dedede';
+		}
+//		thisMb.style.borderColor = '#cd2426';
+		$miaobian.css('border-color','#dedede');
+		thisMb1.style.borderColor = '#cd2426';
+		$huantu[0].src = thisMb1.children[0].src;
+	
+	}
+		$(".c56").click(function(){
+			var value=parseInt($('#wzz').val())+1;
+       		$('#wzz').val(value);
+		})
+
+		$(".c55").click(function(){	
+			var num = $("#wzz").val()
+			if(num>0){
+				$("#wzz").val(num-1);
+			}			
+			
+		})
+			
+	})
+
+
+
 	function sel(data){
 		var liarr=document.getElementById("ulid").children;
 		for(var i in liarr){
@@ -414,4 +461,10 @@
 		}
 		divarr[data-1].className="nav3-right";
 	}
+
+
+
+
+
+
 </script>
