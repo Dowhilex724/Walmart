@@ -5,9 +5,7 @@
 	<title>沃玛 - 全球经典首选电子商务平台</title>
 	<link href="css/public.css" rel="stylesheet" type="text/css">
 	<link href="css/style1.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/zhuceyanzheng.js"></script>
-	<script type="text/javascript" src="js/mytools.js"></script>
+
 </head>
 <body>
 <div id="user-out">
@@ -30,19 +28,19 @@
 			<img src="images/ren1.png" />
 			<a href="#">新用户注册</a>
 		</div>
-		<input placeholder="请输入手机号" type="text" name="phone" id="phone1" /><span id="hai"></span><br/>
-		<input placeholder="请输入验证码" type="text" name="yanzheng" id="yanzheng" />
-		<input id="checkCode" type="button" value="获取验证码" /><span id="hai1"></span><br/>
-		<input placeholder="请输入6-32位登录密码" type="password" name="zhanghao" id="zhanghao1" /><span id="hai2"></span><br/>
-		<input placeholder="请再次输入密码" type="password" name="mima" id="mima" /><span id="hai5"></span><br/>
-		<input type="checkbox" id="kuang" />
-		<span class="zizi">我已阅读并同意</span>
-		<a class="xieyi" href="#">&nbsp&nbsp&nbsp《必要服务协议》</a><br/>
-		<input type="submit" id="tijiao" value="注册" />
-
+		<form action="zhuce.php" method="post">
+				<input placeholder="请输入手机号" type="text" name="userName" id="phone1" /><span id="hai"></span><br/>
+				<input placeholder="请输入验证码" type="text" name="userPhone" id="yanzheng" />
+				<input id="checkCode" type="button" value="获取验证码" /><span id="hai1"></span><br/>
+				<input placeholder="请输入6-32位登录密码" type="password" name="userPass" id="zhanghao1" /><span id="hai2"></span><br/>
+				<input placeholder="请再次输入密码" type="password" name="mima" id="mima" /><span id="hai5"></span><br/>
+				<input type="checkbox" id="kuang" />
+				<span class="zizi">我已阅读并同意</span>
+				<a class="xieyi" href="#">&nbsp&nbsp&nbsp《必要服务协议》</a><br/>
+				<input type="submit" id="tijiao" value="注册" />
+		</form>
 	</div>
 </div>
-
 <div id="footer">
 	<div class="footerright">
 		<ul>
@@ -69,3 +67,25 @@
 </div>
 </body>
 </html>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/zhuceyanzheng.js"></script>
+	<script type="text/javascript" src="js/mytools.js"></script>
+<script type="text/javascript" >
+
+jQuery("#phone1").blur(function(){
+	jQuery.ajax({
+		url:"zhuce1.php",
+		async:true,
+		data:"userName="+jQuery("#phone1").val(),
+		type:"get",
+		success:function(data){
+			console.log(jQuery("#phone1").val()+data)
+			if(data=="1"){
+				jQuery("#hai").html("该用户已经被注册了");
+			}else{
+				jQuery("#hai").html("该用户没有人使用");
+			}
+		}	
+	}) 
+});
+</script>

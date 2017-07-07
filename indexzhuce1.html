@@ -5,9 +5,10 @@
 	<title>沃玛 - 全球经典首选电子商务平台</title>
 	<link href="css/public.css" rel="stylesheet" type="text/css">
 	<link href="css/style3.css" rel="stylesheet" type="text/css">
-	<script src="js/json2.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 	<script src="js/mytools.js"></script>
 </head>
+
 <script>
 window.onload=function(){
 	document.getElementById("tijiao1").onclick=function(){
@@ -29,10 +30,7 @@ window.onload=function(){
 			upws=item[1];
 		}
 	}
-	if(uname && upws){
-		alert("欢迎您回来!");
-	}
-
+	
 	$("tijiao1").onclick=function(){
  		if(($("mima2").value!="")&&($("zhanghao2").value!="")){
  				alert("登陆成功");
@@ -63,8 +61,9 @@ window.onload=function(){
 			<img src="images/ren1.png" />
 			<a href="#">用户登录</a>
 		</div>
-		<input type="text" name="zhanghao" id="zhanghao2" /><br/>
-		<input type="password" name="mima" id="mima2" /><br/>
+		<input type="text" name="userName" id="zhanghao2" />
+		<span id="errmsg"></span></span><br/>
+		<input type="password" name="userPass" id="mima2" /><br/>
 		<input type="checkbox" id="kuang1" />
 		<span class="zizi">下次自动登录</span>
 		<a class="xieyi1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp忘记密码？</a><br/>
@@ -74,17 +73,6 @@ window.onload=function(){
 		<input type="button" id="qq" value="QQ登录" />
 	</div>
 </div>
-<script>
-</script>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -115,3 +103,21 @@ window.onload=function(){
 </div>
 </body>
 </html>
+<script type="text/javascript">
+jQuery("#tijiao1").click(function(){
+	jQuery.ajax({
+		url:"denglu.php",
+		async:true,
+		data:"userName="+jQuery('#zhanghao2').val()+"&userPass="+jQuery("#mima2").val(),
+		type:"post",
+		success:function(data){
+			if(data=="1"){
+				//保存cookie
+				location.href="index1.html";
+			}else{
+				jQuery("#errmsg").html("亲，用户名或者密码错误，登录失败，请想好再输！");
+			}
+		}		
+	});	
+});
+</script>
