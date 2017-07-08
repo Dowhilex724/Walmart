@@ -70,6 +70,7 @@
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="js/zhuceyanzheng.js"></script>
 	<script type="text/javascript" src="js/mytools.js"></script>
+	
 <script type="text/javascript" >
 
 jQuery("#phone1").blur(function(){
@@ -82,10 +83,12 @@ jQuery("#phone1").blur(function(){
 			console.log(jQuery("#phone1").val()+data)
 			if(data=="1"){
 				jQuery("#hai").html("该用户已经被注册了");
+				//注册成功，跳转登录页面window.location.href="login.html"
 			}else{
 				jQuery("#hai").html("该用户没有人使用");
 			}
 		}	
 	}) 
 });
+
 </script>
