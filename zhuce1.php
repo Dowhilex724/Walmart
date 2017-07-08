@@ -1,6 +1,6 @@
 <?php
 	//1、接收用户的输入
-	$userName=$_GET['userName'];
+	$userName=$_REQUEST['userName'];
 	
 	//2、在数据库中查询
 	//1)、连接数据库
