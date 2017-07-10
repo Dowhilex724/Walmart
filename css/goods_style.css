@@ -48,30 +48,33 @@ header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(..
 #BlandMan .BlandNum .p2{width:54px; height:12px;}
 
 
-#BlandUp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:40px; }
+#liebiao1 {
+    display: -webkit-flex;
+    display: flex;
+    width: 1110px;
+    text-align:center;
+    padding-left:90px;
+    padding-top:20px;
+      flex-wrap: wrap;
+}
+ 
+#liebiao1 li{
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+  
+}
 
-#BlandUpZ {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
-.Blz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
-#BlandUpZ .Blz p{color:#ff0000;margin-top:10px;}
+#liebiao1 li div{
+	width:250px;
+	height:56px;
+	background:#fff;
+}
 
-#BlandUpp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
-
-#BlandUpZz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
-.Blzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
-#BlandUpZz .Blzz p{color:#ff0000;margin-top:10px;}
-
-#BlandUppp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
-
-#BlandUpZzz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
-.Blzzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
-#BlandUpZzz .Blzzz p{color:#ff0000;margin-top:10px;}
-
-#BlandUpppp {display:flex;width: 1086px;height: 270px;justify-content:space-between;padding-left:92px;padding-top:20px; }
-
-#BlandUpZzzz {display:flex;width: 1086px;height: 52px;justify-content:space-between;padding-left:92px; }
-.Blzzzz{width: 251px;height: 52px;background:#fff;text-align:center;font:14px/14px "微软雅黑";}
-#BlandUpZzzz .Blzzzz p{color:#ff0000;margin-top:10px;}
-
+#liebiao1 li div p{
+	padding-top:10px;
+	color:#FF0000;
+}
 
 #footer{width:100%;height:160px;background:#fff;margin-top:70px;}
 #footer .footerright{width:336px;height:154px;float:left;padding-left:176px; }

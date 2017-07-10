@@ -121,7 +121,9 @@ header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(..
 
 #ulid .qiehuan{background:#fff; color:#000;}
 
-
+.ulll .action{
+	border-color:#cd2426!important;background:url(../images/specs.png) no-repeat 40px 14px;
+}
 
 
 

@@ -7,10 +7,22 @@ body{background:#f9f9f9;}
 #sjt img{position:absolute;left:146px;top:30px; z-index:2;}
 
 #erji1{position:relative;z-index:4;}
-#erji1 ul{width:128px;height:174px;position:absolute;left:510px;top:66px;z-index:4;background:#fff;display:none;}
-#erji1 ul li{text-align:center;height:40px;}
+#erji1 ul{padding-top:38px;width:128px;height:174px;position:absolute;left:510px;top:66px;z-index:4;display:none;}
+#erji1 ul li{background:#fff;text-align:center;height:40px;}
 #erji1 ul li a{font-size:16px;padding-top:14px;display:block;color:#333;}
 #erji1 ul li:hover{ background: #e7e7e7; }
+
+#erji3{position:relative;z-index:4;}
+#erji3 ul{padding-top:38px;width:128px;height:174px;position:absolute;left:570px;top:66px;z-index:4;display:none;}
+#erji3 ul li{background:#fff;text-align:center;height:40px;}
+#erji3 ul li a{font-size:16px;padding-top:14px;display:block;color:#333;}
+#erji3 ul li:hover{ background: #e7e7e7; }
+
+#erji5{position:relative;z-index:4;}
+#erji5 ul{padding-top:38px;width:128px;height:174px;position:absolute;left:690px;top:66px;z-index:4;display:none;}
+#erji5 ul li{background:#fff;text-align:center;height:40px;}
+#erji5 ul li a{font-size:16px;padding-top:14px;display:block;color:#333;}
+#erji5 ul li:hover{ background: #e7e7e7; }
 
 header{width:100%;background:#f9f9f9;}
 header .header1{width:1263px; height:30px; background:#333;}
@@ -22,7 +34,7 @@ header .header1 .header-nav ul li:first-child a{padding-left:30px;}
 header .header1 .header-nav ul li:last-child a{border-right:none;}
 header .header1 .header-user{float:right; width:570px;}
 
-header .header1 .header-user .user-out{float:left;width:226px;}
+header .header1 .header-user .user-out{float:left;width:268px;}
 header .header1 .header-user .user-out span{display:block;float:left;font:12px/30px "";color:#ccc;}
 header .header1 .header-user .user-out ul li{float:left;font:12px/30px "";color:#ccc;padding-left:14px;}
 header .header1 .header-user .user-out ul li a{color:#ccc; border-right:1px solid #ccc;padding-right:14px;}
@@ -90,7 +102,7 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 	transform: scale(1.1);
 }
 .main2-l{
-	width: 33.3%;
+	width: 10%;
 	height: 365px;
 	float: left;
 	overflow: hidden;
@@ -101,14 +113,92 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 	transition: all 0.5s;
 }
 .main2-l:hover img{
-	-webkit-transform: translateX(-10px);
-	-moz-transform: translateX(-10px);
-	-ms-transform: translateX(-10px);
-	-o-transform: translateX(-10px);
-	transform: translateX(-10px);
-	opacity: 0.5;
+	-webkit-transform: translateX(-8px);
+	-moz-transform: translateX(-8px);
+	-ms-transform: translateX(-8px);
+	-o-transform: translateX(-8px);
+	transform: translateX(-8px);
+	opacity: 0.8;
 }
-#main2 .main2-r{float:left;width:620px;height:552px;padding-left:10px;}
+#main2 .main2-r{float:left;width:630px;height:552px;padding-left:10px;}
+#main2 .main2-r .grid{float:left;width:630px;height:253px;padding-left:10px;margin-bottom:10px;}
+#main2 .main2-r .grid1{float:left;width:630px;height:253px;padding-left:10px;}
+
+
+#main2 .main2-r .grid img:hover{box-shadow:-3px 3px 0px #d2d2d2, 
+3px 0px 3px #d2d2d2, 0px -3px 3px #d2d2d2, 0 3px 3px #d2d2d2;  }
+
+#main2 .main2-r .grid1 img:hover{box-shadow:-3px 3px 0px #d2d2d2, 
+3px 0px 3px #d2d2d2, 0px -3px 3px #d2d2d2, 0 3px 3px #d2d2d2;  }
+.main2-r .grid1 img{width: 704px;}
+.main2-r img{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.main2-r .grid:hover *{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.main2-r .grid1:hover *{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.main2-r .grid{
+	width: 10%;
+	height: 253px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.main2-r .grid1{
+	width: 13%;
+	height: 253px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+.main2-r .grid img{
+	height:100%;
+	transition: all 0.5s;
+}
+.main2-r .grid:hover img{
+	-webkit-transform: translateX(-8px);
+	-moz-transform: translateX(-8px);
+	-ms-transform: translateX(-8px);
+	-o-transform: translateX(-8px);
+	transform: translateX(-8px);
+	opacity: 0.8;
+}
+
+
+.main2-r .grid1 img{
+	height:100%;
+	transition: all 0.5s;
+}
+.main2-r .grid1:hover img{
+	-webkit-transform: translateX(-8px);
+	-moz-transform: translateX(-8px);
+	-ms-transform: translateX(-8px);
+	-o-transform: translateX(-8px);
+	transform: translateX(-8px);
+	opacity: 0.8;
+}
+
+
+
 
 
 
@@ -139,7 +229,7 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 #nanzhuangimg .nimg{float:left;}
 
 #nanzhuangimg .nimg li{float:left;padding-left:18px;}
-#nanzhuangimg .nimg li img{padding-top:30px;}
+#nanzhuangimg .nimg li img{margin-top:30px;}
 #nanzhuangimg .nimg li span{display:block;text-align:center;font:18px/40px "";padding-top:10px;color:#333;}
 #nanzhuangimg .nimg li p{text-align:center; color:red;font:18px/18px "";}
 #nanzhuangimg .nimg img:hover{box-shadow:-3px 3px 0px #d2d2d2, 
@@ -155,7 +245,7 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 #nvzhuangimg .nvimg{float:left;}
 
 #nvzhuangimg .nvimg li{float:left;padding-left:18px;}
-#nvzhuangimg .nvimg li img{padding-top:30px;}
+#nvzhuangimg .nvimg li img{margin-top:30px;}
 #nvzhuangimg .nvimg li span{display:block;text-align:center;font:18px/40px "";padding-top:10px;color:#333;}
 #nvzhuangimg .nvimg li p{text-align:center; color:red;font:18px/18px "";}
 #nvzhuangimg .nvimg img:hover{box-shadow:-3px 3px 0px #d2d2d2, 
@@ -170,7 +260,7 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 #xieziimg{width:1200px;height:696px;float:left;padding-top:30px; }
 #xieziimg .xzimg{float:left;}
 #xieziimg .xzimg li{float:left;padding-left:18px;}
-#xieziimg .xzimg li img{padding-top:30px;}
+#xieziimg .xzimg li img{margin-top:30px;}
 #xieziimg .xzimg li span{display:block;text-align:center;font:18px/40px "";padding-top:10px;color:#333;}
 #xieziimg .xzimg li p{text-align:center; color:red;font:18px/18px "";}
 #xieziimg .xzimg img:hover{box-shadow:-3px 3px 0px #d2d2d2, 
@@ -198,5 +288,9 @@ header .pingpu{background:url(../images/pingpu2.png) center; float:left; width:1
 
 #qg1{position:absolute;left:-140px;top:-30px; z-index:2;display:none;}
 
-.fixed_banner{width:100%;background:#fff;height:50px;position: fixed;bottom:10px;z-index: 10000;display: none;}
-.fixed_banner img{padding-left:32px;}
+.fixed_banner{border-bottom:1px solid #C9C9C9;width:100%;background:#fff;height:50px;position: fixed;bottom:10px;z-index: 10000;display: none;}
+.fixed_banner img{padding-left:32px;float:left;}
+.fixed_banner .fixed_a{width: 1020px;height:50px;float:left;padding-left:30px;}
+.fixed_banner .fixed_a li{padding-left:10px;float:left;width:90px;height:50px;text-align:center;}
+.fixed_banner .fixed_a li a{width:50px; height:20px;display: block;margin-top:14px;padding-bottom:4px;font-size:16px;}
+.fixed_banner .fixed_a li a:hover{border-bottom:3px solid #503767;}

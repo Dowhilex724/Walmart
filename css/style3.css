@@ -33,6 +33,7 @@ body{background:#f9f9f9;}
 #main #neirong .tou2 a{width:360px;font-size:16px;display:block;padding-top:2px;float:left;}
 #main #neirong #zhanghao2{width:402px;height:40px;border:1px solid #bbb;margin-top:20px;}
 #main #neirong #mima2{width:402px;height:40px;border:1px solid #bbb;margin-top:20px;}
+#main #neirong #errmsg{display: block;width:400px;height:40px;float:left;}
 #main #neirong #kuang1{width:13px; height:13px;border:#d5cdda;margin-top:20px;}
 #main #neirong .xieyi1{color:#07a6df;}
 #main #neirong #tijiao1{width:400px;height:50px;background:#f49f26;color:#fff;font-size:18px;border:1px solid #f49f26;margin-top:20px;}
