@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="user-out">
-		<img src="images/logo.png" />
+		<a href="#"><img src="images/logo.png" /></a>
 		<div class="right1">
 			<span>欢迎来到必要，请</span>
 			<ul>
@@ -74,21 +74,44 @@
 <script type="text/javascript" >
 
 jQuery("#phone1").blur(function(){
-	jQuery.ajax({
-		url:"zhuce1.php",
-		async:true,
-		data:"userName="+jQuery("#phone1").val(),
-		type:"get",
-		success:function(data){
-			console.log(jQuery("#phone1").val()+data)
-			if(data=="1"){
-				jQuery("#hai").html("该用户已经被注册了");
-				//注册成功，跳转登录页面window.location.href="login.html"
-			}else{
-				jQuery("#hai").html("该用户没有人使用");
-			}
-		}	
-	}) 
+//	jQuery.ajax({
+//		url:"zhuce1.php",
+//		async:true,
+//		data:"userName="+jQuery("#phone1").val(),
+//		type:"get",
+//		success:function(data){
+//			console.log(jQuery("#phone1").val()+data)
+//			if(data=="1"){
+//				jQuery("#hai").html("该用户已经被注册了");
+//				//注册成功，跳转登录页面window.location.href="login.html"
+//			}else{
+//				jQuery("#hai").html("该用户没有人使用");
+//			}
+//		}	
+//	}) 
+	jQuery.get("zhuce1.php", { userName:jQuery("#phone1").val()},function(data){
+		if(data){
+		    jQuery("#hai").html("该用户已经被注册了");
+		}else{
+			jQuery("#hai").html("该用户没有人使用");
+		}
+	} );
 });
+jQuery("#tijiao").click(function(){
+	var username=jQuery("#phone1").val();
+	var pwd=jQuery("#zhanghao1").val();
+    var phone=jQuery("#yanzheng").val();
+	
+	jQuery.post("zhuce.php", { userName:username, userPass:pwd,userPhone:phone} ,function(data){
+		if(data){
+			location.href="indexzhuce1.html";
+		}else{	
+			alert("注册失败")
+		}
+	});
+	
+})
+
+
 
 </script>

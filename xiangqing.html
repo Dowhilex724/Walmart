@@ -22,7 +22,7 @@
 	<div class="header1">
 		<div class="header-nav1">
 			<ul>
-				<li><a href="#">首页</a></li>
+				<li><a href="index1.html">首页</a></li>
 				<li><a href="#">商家入驻</a></li>
 				<li><a href="#">平台政策</a><b></b></li>
 				<li id="hua"><a href="#">必要手机版</a></li>
@@ -133,13 +133,13 @@
 				<li class="panel-sizeImg">
 					<span class="bigsmall">尺寸</span>
 					<div class="haoma">
-						<ul>
-							<li>S</li>
-							<li>M</li>
-							<li>L</li>
-							<li>XL</li>
-							<li>XXL</li>
-							<li>XXXL</li>
+						<ul id="ulll" class="ulll">
+							<li onclick="select(1)" class="action">S</li>
+							<li onclick="select(2)">M</li>
+							<li onclick="select(3)">L</li>
+							<li onclick="select(4)">XL</li>
+							<li onclick="select(5)">XXL</li>
+							<li onclick="select(6)">XXXL</li>
 						</ul>
 					</div>
 					<span class="chakan">查看尺码对照表</span>
@@ -401,14 +401,33 @@
 </body>
 </html>
 
+<script>
 	
+	function select(data){
+		var miaobian2=$('#ulll').children();//取得所有li元素
+		for(var i in miaobian2){//遍历所有li元素
+			miaobian2[i].className="";//把所有选项卡样式清除
+		}
+		miaobian2[data-1].className="action";//设置序号对应的选项卡样式为act样式
+	}
+</script>
 <script type="text/javascript">
 	$(document).ready(function(){
 	var $miaobian=$("#xt>li");
 	var $huantu=$('.dt');
 	var $miaobian1=$('.panel-specs>div');
+	
 	$miaobian.click(function(){miaobian(this);});
 	$miaobian1.click(function(){miaobian1(this);});
+	
+function select(data){
+		var miaobian2=$('.ulll').children();//取得所有li元素
+		for(var i in miaobian2){//遍历所有li元素
+			miaobian2[i].className="";//把所有选项卡样式清除
+		}
+		miaobian2[data-1].className="action";//设置序号对应的选项卡样式为act样式
+	}
+
 	function miaobian(thisMb){
 		for(var i=0; i<$miaobian.length; i++){
 			$miaobian[i].style.borderColor = '#dedede';
@@ -420,11 +439,24 @@
 	function miaobian1(thisMb1){
 		for(var i=0; i<$miaobian1.length; i++){
 			$miaobian1[i].style.borderColor = '#dedede';
+			$miaobian1[i].style.background="url(images/specs.png) no-repeat 144px 14px"
 		}
 //		thisMb.style.borderColor = '#cd2426';
 		$miaobian.css('border-color','#dedede');
 		thisMb1.style.borderColor = '#cd2426';
 		$huantu[0].src = thisMb1.children[0].src;
+	
+	}
+	
+function miaobian2(thisMb2){
+		for(var i=0; i<$miaobian2.length; i++){
+			$miaobian2[i].style.borderColor = '#dedede';
+			$miaobian2[i].style.background="url(images/specs.png) no-repeat 42px 14px"
+		}
+//		thisMb.style.borderColor = '#cd2426';
+		$miaobian.css('border-color','#dedede');
+		thisMb2.style.borderColor = '#cd2426';
+		$huantu[0].src = thisMb2.children[0].src;
 	
 	}
 		$(".c56").click(function(){
@@ -461,7 +493,6 @@
 		}
 		divarr[data-1].className="nav3-right";
 	}
-
 
 
 

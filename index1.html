@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="js/lunbo1.js"></script>
 	<script type="text/javascript" src="js/hidden.js"></script>
 	<script type="text/javascript" src="js/shoufengqin.js"></script>
+	<script type="text/javascript" src="js/cookieTools.js"></script>
 </head>
 <body>
 <div id="sjt">
@@ -19,7 +20,7 @@
 	<div class="header1">
 		<div class="header-nav">
 			<ul>
-				<li><a href="#">首页</a></li>
+				<li><a href="index1.html">首页</a></li>
 				<li><a href="#">商家入驻</a></li>
 				<li><a href="#">平台政策</a><b></b></li>
 				<li id="hua"><a href="#">必要手机版</a></li>
@@ -31,8 +32,10 @@
 			<div class="user-out">
 				<span>欢迎来到必要，请</span>
 				<ul>
-					<li><a href="file:///D:/Documents/Desktop/%E6%B2%83%E7%8E%9Bfirst%E9%A1%B9%E7%9B%AE/indexzhuce1.html" id="loginBtn">登录</a><b></b></li>
-					<li><a href="file:///D:/Documents/Desktop/%E6%B2%83%E7%8E%9Bfirst%E9%A1%B9%E7%9B%AE/index1denglu.html" id="registBtn">注册</a><b></b></li>
+					<li><a href="indexzhuce1.html" id="loginBtn">登录</a></li>
+					<li><a href="index1denglu.html" id="registBtn">注册</a></li>
+					<li><a href="#" id="loginBtn1">我的王~</a></li>
+					<li><a href="#" id="registBtn1">退出</b></li>
 				</ul>
 			</div>
 			<div class="user-center">
@@ -74,9 +77,9 @@
 					<ul class="ul1" id="ul1">
 						<li><a href="#" >眼镜</a></li>
 						<li><a class="yifu1" href="#" >服装</a></li>
-						<li><a href="#" >婴童</a></li>
+						<li><a class="yifu2" href="#" >婴童</a></li>
 						<li><a href="#" >鞋靴</a></li>
-						<li><a href="#" >运动</a></li>
+						<li><a class="yifu3" href="#" >运动</a></li>
 						<li><a href="#" >皮具</a></li>
 						<li><a href="#" >出行</a></li>
 						<li><a href="#" >个护</a></li>
@@ -105,9 +108,41 @@
 	<li><a href="#">配饰</a></li>
 	</ul>
 </div>
+<div id="erji3">
+	<ul id="erji4">
+	<li><a href="#">童装</a></li>
+	<li><a href="#">玩具</a></li>
+	<li><a href="#">童床</a></li>
+	<li><a href="#">书包</a></li>
+	<li><a href="#">帽子</a></li>
+	</ul>
+</div>
+<div id="erji5">
+	<ul id="erji6">
+	<li><a href="#">运动鞋</a></li>
+	<li><a href="#">功能内衣</a></li>
+	<li><a href="#">球拍</a></li>
+	<li><a href="#">背包</a></li>
+	<li><a href="#">帽子</a></li>
+	</ul>
+</div>
+
+
 <div class="fixed_banner">
 	<img src="images/xlogo.png" />
-
+	<ul class="fixed_a">
+		<li><a href="#" >眼镜</a></li>
+		<li><a href="#" >服装</a></li>
+		<li><a href="#" >婴童</a></li>
+		<li><a href="#" >鞋靴</a></li>
+		<li><a href="#" >运动</a></li>
+		<li><a href="#" >皮具</a></li>
+		<li><a href="#" >出行</a></li>
+		<li><a href="#" >个护</a></li>
+		<li><a href="#" >美妆</a></li>
+		<li><a href="#"	>居家</a></li>
+		
+	</ul>
 </div>
 <section>
 	<div id="banner">
@@ -131,11 +166,14 @@
 	<div class="main2-l">
 	<a href="#"><img src="images/tu3.png" /></a>
 	</div>
+	
 	<div class="main2-r">
-	<a href="#"><img src="images/ai1.png" /></a>
-	<a href="#"><img src="images/ai2.png" /><p></p></a>
-
-
+		<div class="grid">
+				<img src="images/ai1.png" />
+		</div>
+		<div class="grid1">
+				<img src="images/ai2.png" />
+		</div>
 	</div>
 </div>
 <div id="jingxuan">
@@ -290,8 +328,26 @@
 </body>
 </html>
 	
+<script>         
+jQuery(function(){
+	var userName=getCookie("userName");
+	if(userName!=""){
+		jQuery("#registBtn").toggle();
+		jQuery("#loginBtn").toggle();
+		jQuery("#loginBtn1").html("我的王~"+userName);
+	}else{
+		jQuery("#registBtn1").toggle();
+		jQuery("#loginBtn1").toggle();
+		jQuery("#registBtn").html("注册");
+		jQuery("#loginBtn").toggle("登录");
+	}
+})
 
-
+jQuery(function(){
+	removeCookie("#registBtn1");
+	saveCookie("#registBtn1","#registBtn1",-1);
+})
+</script>
 
 
 <script>
@@ -326,6 +382,38 @@ $("#erji2").on("mouseleave", function() {
                 $(this).hide();
             });
 </script>
+<script>
+//菜单显现隐藏2
+$(".yifu2").on("mouseenter", function() {
+                $('#erji4').show();
+            })
+$(".yifu2").on("mouseleave", function() {
+                $('#erji4').hide();
+            });
+$("#erji4").on("mouseenter", function() {
+                $(this).show();
+            })
+$("#erji4").on("mouseleave", function() {
+                $(this).hide();
+            });
+</script>
+
+<script>
+//菜单显现隐藏2
+$(".yifu3").on("mouseenter", function() {
+                $('#erji6').show();
+            })
+$(".yifu3").on("mouseleave", function() {
+                $('#erji6').hide();
+            });
+$("#erji6").on("mouseenter", function() {
+                $(this).show();
+            })
+$("#erji6").on("mouseleave", function() {
+                $(this).hide();
+            });
+</script>
+
 
 <script>
 //二维码显现隐藏2
@@ -341,8 +429,8 @@ $("#qg1").on("mouseenter", function() {
 $("#qg1").on("mouseleave", function() {
                 $(this).hide();
             });
+            
 </script>
-
 
 
 

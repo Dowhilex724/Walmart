@@ -91,57 +91,28 @@
 		<img class="img2" src="images/pingfen2.png" />
 	</div>
 </div>
-
-<div id="BlandUp">
-	<img class="Blimg" src="images/xq1.png" />
-	<img class="Blimg" src="images/xq2.png" />
-	<img class="Blimg" src="images/xq3.png" />
-	<img class="Blimg" src="images/xq4.png" />
+<div class="margin">
+	
+<ul id="liebiao1">
+	<li>
+		<img class="Blimg" src="images/xq1.png" />
+		<div class="Blz">回访抗皱回弹西裤<p>￥279</p></div>
+	</li>
+	<li>
+		<img class="Blimg" src="images/xq1.png" />
+		<div class="Blz">都市精英商务套装<p>￥279</p></div>
+	</li>
+	<li>
+		<img class="Blimg" src="images/xq1.png" />
+		<div class="Blz">外翻边 直通休闲裤<p>￥279</p></div>
+	</li>
+	<li>
+		<img class="Blimg" src="images/xq1.png" />
+		<div class="Blz">手工臻品灰色套西<p>￥279</p></div>
+	</li>
+	
+</ul>
 </div>
-<div id="BlandUpZ">
-	<div class="Blz">回访抗皱回弹西裤<p>￥279</p></div>
-	<div class="Blz">回访抗皱回弹西裤<p>￥289</p></div>
-	<div class="Blz">回访抗皱回弹西裤<p>￥299</p></div>
-	<div class="Blz">回访抗皱回弹西裤<p>￥309</p></div>
-</div>
-<div id="BlandUpp">
-	<img class="Blimgg" src="images/xq1.png" />
-	<img class="Blimgg" src="images/xq2.png" />
-	<img class="Blimgg" src="images/xq3.png" />
-	<img class="Blimgg" src="images/xq4.png" />
-</div>
-<div id="BlandUpZz">
-	<div class="Blzz">回访抗皱回弹西裤<p>￥279</p></div>
-	<div class="Blzz">回访抗皱回弹西裤<p>￥289</p></div>
-	<div class="Blzz">回访抗皱回弹西裤<p>￥299</p></div>
-	<div class="Blzz">回访抗皱回弹西裤<p>￥309</p></div>
-</div>
-<div id="BlandUppp">
-	<img class="Blimggg" src="images/xq5.png" />
-	<img class="Blimggg" src="images/xq6.png" />
-	<img class="Blimggg" src="images/xq5.png" />
-	<img class="Blimggg" src="images/xq6.png" />
-</div>
-<div id="BlandUpZzz">
-	<div class="Blzzz">回访抗皱回弹西裤<p>￥279</p></div>
-	<div class="Blzzz">回访抗皱回弹西裤<p>￥289</p></div>
-	<div class="Blzzz">回访抗皱回弹西裤<p>￥299</p></div>
-	<div class="Blzzz">回访抗皱回弹西裤<p>￥309</p></div>
-</div>
-<div id="BlandUpppp">
-	<img class="Blimgggg" src="images/xq5.png" />
-	<img class="Blimgggg" src="images/xq6.png" />
-	<img class="Blimgggg" src="images/xq5.png" />
-	<img class="Blimgggg" src="images/xq6.png" />
-</div>
-<div id="BlandUpZzzz">
-	<div class="Blzzzz">回访抗皱回弹西裤<p>￥279</p></div>
-	<div class="Blzzzz">回访抗皱回弹西裤<p>￥289</p></div>
-	<div class="Blzzzz">回访抗皱回弹西裤<p>￥299</p></div>
-	<div class="Blzzzz">回访抗皱回弹西裤<p>￥309</p></div>
-</div>
-
-
 
 
 
@@ -174,3 +145,24 @@
 </div>
 </body>
 </html>
+<script>
+jQuery(function(){
+	jQuery.ajax({
+		url:"getGoodsList.php",
+		type:"get",
+		success:function(data){
+		var obj=eval(data);
+		for(var i=0;i<14;i++){
+			let goodsName=obj[i].goodsName;
+
+			let goodsPrice=obj[i].goodsPrice;
+			let goodsImg=obj[i].goodsImg;
+
+			let str='<li><img class="Blimg" src="'+obj[i].goodsImg+'" /><div class="Blz">'+obj[i].goodsName+'<p>￥'+obj[i].goodsPrice+'</p></div></li>';
+			
+			jQuery("#liebiao1").append(str);
+		}
+		}
+	});
+})
+</script>

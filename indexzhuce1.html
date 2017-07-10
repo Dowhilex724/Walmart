@@ -67,7 +67,7 @@ window.onload=function(){
 		<input type="checkbox" id="kuang1" />
 		<span class="zizi">下次自动登录</span>
 		<a class="xieyi1" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp忘记密码？</a><br/>
-		<input type="submit" id="tijiao1" value="登录" />
+		<input type="button" id="tijiao1" value="登录" />
 		<a class="sanfang">使用第三方账号登录：</a>
 		<input type="button" id="weixin" value="微信登录" />
 		<input type="button" id="qq" value="QQ登录" />
@@ -112,7 +112,8 @@ jQuery("#tijiao1").click(function(){
 		type:"post",
 		success:function(data){
 			if(data=="1"){
-				//保存cookie
+				saveCookie("userName",jQuery('#zhanghao2').val(),7);
+				console.log(getCookie("userName"));
 				location.href="index1.html";
 			}else{
 				jQuery("#errmsg").html("亲，用户名或者密码错误，登录失败，请想好再输！");
@@ -120,4 +121,5 @@ jQuery("#tijiao1").click(function(){
 		}		
 	});	
 });
+
 </script>
