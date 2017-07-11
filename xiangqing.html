@@ -6,14 +6,10 @@
 	<link href="css/public.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/xqstyle.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-
-	
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>	
+	<script type="text/javascript" src="js/parabola.js" ></script>
 </head>
 <body>
-
-
-
 <div id="sjt">
 <img src="images/sjtu.png" />
 </div>
@@ -76,24 +72,39 @@
 		</div>
 		
 </header>
+<div id="twoji1">
+	<ul id="twoji2">
+	<li><a href="#">运动</a></li>
+	<li><a href="#">T恤</a></li>
+	<li><a href="#">牛仔裤</a></li>
+	<li><a href="#">连衣裙</a></li>
+	<li><a href="#">美妆</a></li>
+	<li><a href="#">凉席</a></li>
+	<li><a href="#">剃须刀</a></li>
+	<li><a href="#">拉杆箱</a></li>
+	<li><a href="#">数码</a></li>
+	<li><a href="#">空气清新器</a></li>
+	</ul>
+</div>
 <div class="margin">
 <div id="nav1">
-	<a href="#">首页</a>
+	<a href="index1.html">首页</a>
 	<span>> 松紧腰 竖条纹 时尚休闲裤</span>
 </div>
 </div>
 <div class="margin">
-<div id="nav2"class="margin">
+<div id="nav2">
+	
 	<div id="nav2-left">
 		
 		<img class="dt" src="images/xqt1.png" />
 		
 		<ul id="xt" class="xt">
-			<li><img src="images/xqt1.png" /></li>
-			<li><img src="images/xqt2.png" /></li>
-			<li><img src="images/xqt3.png" /></li>
-			<li><img src="images/xqt4.png" /></li>
-			<li><img src="images/xqt5.png" /></li>
+			<li><img class="xxqt" src="images/xqt1.png" /></li>
+			<li><img class="xxqt" src="images/xqt2.png" /></li>
+			<li><img class="xxqt" src="images/xqt3.png" /></li>
+			<li><img class="xxqt" src="images/xqt4.png" /></li>
+			<li><img class="xxqt" src="images/xqt5.png" /></li>
 		</ul>
 		<ul id="xz">
 			<li><span>7天无忧退换</span></li>
@@ -102,6 +113,10 @@
 			<li><span>顺丰包邮</span></li>
 		</ul>
 	</div>
+	
+	
+	
+	
 	<div id="nav2-right" >
 		<div id="nv-top">
 			<h2>松紧腰 竖条纹 时尚休闲裤</h2>
@@ -122,8 +137,6 @@
 						</span>
 					</div>
 				</li>
-
-
 				<li class="panel-specs">
 					<span class="color1">颜色</span>
 					<div class="color2">黑色条纹 DK17025</div>
@@ -159,7 +172,11 @@
 			</ul>
 		</div>
 		<div id="nv-bottom">
-			<p id="buyNow" class="panel-buyNow">立即购买</p>
+			<a href="shoppingcar.html"><p id="buyNow" class="panel-buyNow" style="z-index: 1000;">立即购买</p></a>
+		<div id="thumb-wrap" >1</div>
+				
+				
+		
 			<p id="addShopCar">加入购物车</p>
 		</div>
 	</div>
@@ -188,7 +205,7 @@
 			<img src="images/nimada.png">
 			<span>商品质量:4.7</span>
 		</div>
-		<a href="#">进店看看</a>
+		<a href="goods.html">进店看看</a>
 		<ul>
 		<li><img src="images/nibada.png"><p>纯羊毛套西</p><span>￥299</span></li>
 		<li><img src="images/nibada.png"><p>纯羊毛套西</p><span>￥299</span></li>
@@ -402,7 +419,24 @@
 </html>
 
 <script>
-	
+	//加入购物车
+	var element = document.getElementById("thumb-wrap"), 
+		target = document.getElementById("shopCar");
+	// 抛物线元素的的位置标记
+	var parabola = funParabola(element,target).mark();
+	document.getElementById("addShopCar").onclick=function(){
+		document.getElementById("thumb-wrap").style.cssText="display:block";
+		parabola.init();
+		/*document.getElementById("joinCart").style.cssText="display:none";
+		document.getElementById("balance").style.cssText="display:block";*/
+		
+	};
+
+</script>
+<script>
+
+
+
 	function select(data){
 		var miaobian2=$('#ulll').children();//取得所有li元素
 		for(var i in miaobian2){//遍历所有li元素
@@ -428,6 +462,10 @@ function select(data){
 		miaobian2[data-1].className="action";//设置序号对应的选项卡样式为act样式
 	}
 
+
+
+
+
 	function miaobian(thisMb){
 		for(var i=0; i<$miaobian.length; i++){
 			$miaobian[i].style.borderColor = '#dedede';
@@ -435,7 +473,14 @@ function select(data){
 		thisMb.style.borderColor = '#cd2426';
 
 		$huantu[0].src = thisMb.children[0].src;
+	
 	}
+	
+	
+	
+	
+	
+	
 	function miaobian1(thisMb1){
 		for(var i=0; i<$miaobian1.length; i++){
 			$miaobian1[i].style.borderColor = '#dedede';
@@ -474,8 +519,6 @@ function miaobian2(thisMb2){
 			
 	})
 
-
-
 	function sel(data){
 		var liarr=document.getElementById("ulid").children;
 		for(var i in liarr){
@@ -498,4 +541,20 @@ function miaobian2(thisMb2){
 
 
 
+</script>
+
+<script>
+//菜单显现隐藏2
+$("#sousuo").on("focus", function() {
+                $('#twoji2').show();
+            })
+$("#sousuo").on("blur", function() {
+                $('#twoji2').hide();
+            });
+$("#twoji2").on("focus", function() {
+                $(this).show();
+            })
+$("#twoji2").on("blur", function() {
+                $(this).hide();
+            });
 </script>

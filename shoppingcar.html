@@ -12,7 +12,7 @@
 <div class="header1">
 		<div class="header-nav1">
 			<ul>
-				<li><a href="#">首页</a></li>
+				<li><a href="index1.html">首页</a></li>
 				<li><a href="#">商家入驻</a></li>
 				<li><a href="#">平台政策</a><b></b></li>
 				<li id="hua"><a href="#">必要手机版</a></li>
@@ -24,7 +24,7 @@
 			<div class="user-out1">
 				<span></span>
 				<ul>
-					<li><a href="javascript:void(0)" id="loginBtn">用户4396</a><b></b></li>
+					<li><a href="javascript:void(0)" id="loginBtn">我的王~ </a><b></b></li>
 					<li><a href="javascript:void(0)" id="registBtn">ⅴ</a><b></b></li>
 				</ul>
 			</div>
@@ -118,11 +118,11 @@
 
 
 <div id="shangpinbox">
-	<div class="Sp1">
+	<div class="Sp1" id="Sp1">
 		<span class="sp2"><input id="Checkbox0" type="checkbox"  class="allselect"/>商家:</span>
 		<span class="sp3">mutudu皮具</span>
 	</div>
-	<div class="Sp2">
+	<div class="Sp2" id="Sp2">
 		<div class="c1"><input id="Checkbox2" type="checkbox"  class="allselect" name="newslist" /></div>
 		<a href="#"><div class="c2"></div></a>
 		<div class="c3">
@@ -133,9 +133,9 @@
 			尺寸:iphone7
 			</div>
 		</div>
-		<div class="c4 ">￥129</div>
+		<div class="c4 " id="c4">129</div>
 		<div class="c5">
-		<i class="c55"></i>
+		<i class="c55" id="c55"></i>
 		<input id="wzz" name ="quantity" type="text" maxlength="3" name="input_11699136"
 							value="1" shopcarid="11699136"
 							discount="0.0" price="129.0"
@@ -143,20 +143,20 @@
 							modelid="0" supplierid="130119"
 							designid="1301195169060100001" sizename="颜色:黑色（蛇纹款）|尺寸:iPhone7"
 							class="jkl">
-		<i class="c56"></i>
+		<i class="c56" id="c56"></i>
 		</div>
 		<div class="c6"></div>
-		<div class="c7" id="c7">￥129</div>
+		<div class="c7" id="c7">129</div>
 		<div class="c8">
 			<div id="c88"></div>
 		</div>
 	</div>
-	<div class="Sp3">
+	<div class="Sp3" id="Sp3">
 		<div class="p1">
 			<div class="pp1">
 				<i><input id="Checkbox3" type="checkbox"  class="allselect"/></i>
 				<span>全选</span>
-				<a href="#">删除</a>
+				<a href="#" id="Sp4">删除</a>
 			</div>
 			<div class="pp2">
 				商品总价：<span class="zongjia" id="totalPrice">¥129</span>
@@ -172,8 +172,7 @@
 		</div>
 	</div>
 	<div class="tallyBox">
-			<a href="http://www.biyao.com/home/index.html"
-			class="inline">继续购物</a>
+			<a href="goods.html"class="inline">继续购物</a>
 			<span id="jz1" style="display:none;">结算</span>
 			 <a href="javascript:;"
 			class="tallyBTnPos" id="jz2">结算</a>
@@ -183,18 +182,6 @@
 		</p>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -227,3 +214,37 @@
 </div>
 </body>
 </html>
+<script>
+	var price=parseInt(document.getElementById("c4").innerHTML);
+	var num=parseInt(document.getElementById("wzz").value);
+	var sum;
+	//添加
+	document.getElementById("c56").onclick=function(){
+		num++;
+		sum=price*num;
+		document.getElementById("wzz").value=num;
+		document.getElementById("c7").innerHTML=sum+".00元";
+	}
+	//减少
+	document.getElementById("c55").onclick=function(){
+		num--;
+		if(num<=1){
+			num=1;
+		}
+		sum=price*num;
+		document.getElementById("wzz").value=num;
+		document.getElementById("c7").innerHTML=sum+".00元";
+	}
+	
+	document.getElementById("c88").onclick=function(){
+		document.getElementById("Sp1").style.cssText="display:none;";
+		document.getElementById("Sp2").style.cssText="display:none;";
+		document.getElementById("Sp3").style.cssText="display:none;";
+	}
+	document.getElementById("Sp4").onclick=function(){
+		document.getElementById("Sp1").style.cssText="display:none;";
+		document.getElementById("Sp2").style.cssText="display:none;";
+		document.getElementById("Sp3").style.cssText="display:none;";
+	}
+	
+</script>
