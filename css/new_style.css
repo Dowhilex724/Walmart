@@ -34,12 +34,22 @@ header .daohang .daohangright{position:relative;}
 header .daohang .daohangright #sousuo{width:312px;height:32px;position:absolute;left:400px;top:30px;}
 header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(../images/sosuuo.png) no-repeat center;z-index:5;position:absolute;left:714px;top:29.8px;border:1px solid #bcbcbc;}
 
-#phone2{float:left;width:1200px;height:40px;margin:0 auto;}
-#phone2 h3{font-size:20px;color:#666;}
-#phone2 a{color:#523691;}
-#dizhi{width:100%;height:464px;float:left;background:#fff;margin-top:10px;}
-#contact{background:url(../images/ditu1.png) no-repeat center; width: 1196px;height: 406px;padding-left:78px;}
 
+#twoji5{position:relative;z-index:4;}
+#twoji5 ul{padding-top:38px;width:306px;position:absolute;left:834px;top:30px;z-index:4;display: none;}
+#twoji5 ul li{background:#fff;height:40px;}
+#twoji5 ul li a{font-size:14px;padding-top:14px;display:block;color:#333;padding-left:10px;}
+#twoji5 ul li:hover{ background: #e7e7e7; }
+
+
+
+#phone2{float:left;width:1200px;height:100px;margin:0 auto;text-align: center;}
+#phone2 h3{font-size:20px;color:#666;margin-top:40px;}
+#phone2 a{color:#523691;}
+#dizhi{width:100%;height:530px;float:left;background:#fff;margin-top:10px;}
+#dizhi #map{margin:60px auto 18px; }
+#dizhi p{width:330px;font-size:16px;margin:0 auto;}
+#dizhi a{color:#503767;}
 #nice{width:1291px;height:90px;float:left;border-bottom:1px solid #cccccc;}
 #nice img{width:1291px;height:90px;float:left;}
 

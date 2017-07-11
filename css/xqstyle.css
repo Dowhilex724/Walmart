@@ -34,6 +34,11 @@ header .daohang .daohangright{position:relative;}
 header .daohang .daohangright #sousuo{width:312px;height:32px;position:absolute;left:400px;top:30px;}
 header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(../images/sosuuo.png) no-repeat center;z-index:5;position:absolute;left:714px;top:29.8px;border:1px solid #bcbcbc;}
 
+#twoji1{position:relative;z-index:4;}
+#twoji1 ul{padding-top:38px;width:306px;position:absolute;left:834px;top:30px;z-index:4;display: none;}
+#twoji1 ul li{background:#fff;height:40px;}
+#twoji1 ul li a{font-size:14px;padding-top:14px;display:block;color:#333;padding-left:10px;}
+#twoji1 ul li:hover{ background: #e7e7e7; }
 
 
 #nav1{width:1263px;height:17px;float:left;padding:24px 0 24px 34px;}
@@ -78,9 +83,10 @@ header .daohang .daohangright #sousuo1{width:34px;height: 34px;background:url(..
 #nav2 #nav2-right #nv-center .panel-main .panel-count #wzz{float:left;width:30px;height:32px;padding-left:20px;}
 #nav2 #nav2-right #nv-center .panel-main .panel-count .c56{border:2px solid #ccc;float:left;display:block;background:url(../images/zhenghe1.png) no-repeat -17px -40px; width: 28px;height:32px;}
 
-#nav2 #nav2-right #nv-bottom{width:400px;height:40px;padding-left:65px;margin-top:20px;}
+#nav2 #nav2-right #nv-bottom{position:relative;width:400px;height:40px;padding-left:65px;margin-top:20px;}
 #nav2 #nav2-right #nv-bottom #buyNow{width:180px;height:40px;float:left;text-align:center;font-size:18px;line-height:2;background:#523669;color:#fff;}
 #nav2 #nav2-right #nv-bottom #addShopCar{width:180px;height:40px;float:left;text-align:center;font-size:18px;line-height:2;background:#f7b200;color:#fff;margin-left:19px;}
+#nav2 #nav2-right #nv-bottom #thumb-wrap{display:none;position:absolute;top:50px;left:350px;width:27px;height:20px;font:14px/20px '';text-align:center;color:#fff;background-color:#ca1608;border-radius:8px;} 
 
 
 
