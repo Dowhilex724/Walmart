@@ -6,7 +6,6 @@
 	$name = $_POST['userName'];//$_POST:针对post请求方法。
 	$pass = $_POST['userPass'];
 	$userPhone = $_POST['userPhone'];
-
 	//2、保存到数据库
 	//1)、连接数据库
 	$con = mysql_connect("localhost","root","qianfeng");
@@ -21,7 +20,6 @@
 		
 		//3)、关闭数据库
 		mysql_close($con);
-		
 		//3、响应
 		if($count==1){
 			echo "注册成功"; //1代表注册成功 0代表注册失败
